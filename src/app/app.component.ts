@@ -1,5 +1,6 @@
+import { Hero } from './objects/hero';
 import { Component } from '@angular/core';
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,7 +27,3 @@ export class AppComponent {
    }
 }
 
-export class Hero {
-  id: number;
-  name: string;
-}
