@@ -3,7 +3,7 @@ import { HEROES } from './objects/moke-heroes';
 import { Injectable } from '@angular/core';
 @Injectable()
 export class HeroService {
-
+  
   constructor() { }
 
   getHeroes(): Promise<Hero[]> {

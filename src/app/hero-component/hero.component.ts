@@ -1,14 +1,13 @@
-import { HeroService } from './hero.service';
-import { Hero } from './objects/hero';
+import { HeroService } from '../hero.service';
+import { Hero } from '../objects/hero';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  providers: [HeroService],
-  styleUrls: ['./app.component.scss']
+  selector: 'heroes',
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.scss']
 })
-export class AppComponent {
+export class HeroComponent {
    title = 'Tour of Heroes';
    selectedHero: Hero;
    heroes: Hero[];
