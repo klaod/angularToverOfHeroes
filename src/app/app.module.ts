@@ -20,7 +20,9 @@ import { AppComponent } from './app/app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [HeroService],
-  bootstrap: [AppComponent]
+  providers: [
+    HeroService
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

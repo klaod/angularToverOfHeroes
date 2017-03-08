@@ -1,10 +1,11 @@
-import { HeroService } from '../hero.service';
+import { HeroService } from './../services/hero.service';
 import { Hero } from '../objects/hero';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'heroes',
   templateUrl: './hero.component.html',
+  //providers: [HeroService],
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
@@ -14,14 +15,11 @@ export class HeroComponent {
    constructor(private heroService: HeroService) { }
 
    ngOnInit(): void {
-     this.getHeroesSlowly();
+     this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
    }
 
    onSelect(hero: Hero): void {
      this.selectedHero = hero;
-   }
-   getHeroesSlowly(): void {
-     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
    }
 }
 
