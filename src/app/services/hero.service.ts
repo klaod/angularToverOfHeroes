@@ -4,13 +4,17 @@ import { HEROES } from '../objects/moke-heroes';
 
 @Injectable()
 export class HeroService {
-  getHeroes(): Hero[] {
-    return HEROES;
-  }
+
   getHeroesSlowly(): Promise<Hero[]> {
     return new Promise(resolve => {
-      setTimeout(() => resolve(this.getHeroes()), 1000);
+      setTimeout(() => resolve(HEROES), 10);
     });
   }
+
+  getHeroSlowly(id: number): Promise<Hero> {
+    return this.getHeroesSlowly()
+        .then(heroes => heroes.find(hero => hero.id === id));
+  }
+  
 }
 
