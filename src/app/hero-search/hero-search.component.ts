@@ -14,7 +14,7 @@ import { Hero } from '../objects/hero';
   moduleId: module.id,
   selector: 'hero-search',
   templateUrl: './hero-search.component.html',
-  styleUrls: [ './hero-search.component.css' ],
+  styleUrls: [ './hero-search.component.scss' ],
   providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {
